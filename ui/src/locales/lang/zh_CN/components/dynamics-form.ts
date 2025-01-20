@@ -13,14 +13,22 @@ export default {
   default: {
     label: '默认值',
     placeholder: '请输入默认值',
-    requiredMessage: '请输入默认值'
+    requiredMessage: '默认值 为必填属性',
+    show: '显示默认值'
+  },
+  tip: {
+    requiredMessage: '不能为空',
+    jsonMessage: 'JSON格式不正确'
+  },
+  searchBar: {
+    placeholder: '请输入关键字搜索'
   },
   paramForm: {
     field: {
       label: '参数',
       placeholder: '请输入参数',
       requiredMessage: '参数 为必填属性',
-      requiredMessage2:'只能输入字母数字和下划线'
+      requiredMessage2: '只能输入字母数字和下划线'
     },
     name: {
       label: '显示名称',
@@ -39,6 +47,21 @@ export default {
       label: '组件类型',
       placeholder: '请选择组件类型',
       requiredMessage: '组建类型 为必填属性'
+    }
+  },
+  DatePicker: {
+    placeholder: '选择日期',
+    year: '年',
+    month: '月',
+    date: '日期',
+    datetime: '日期时间',
+    dataType: {
+      label: '时间类型',
+      placeholder: '请选择时间类型'
+    },
+    format: {
+      label: '格式',
+      placeholder: '请选择格式'
     }
   }
 }

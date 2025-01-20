@@ -26,7 +26,7 @@
               {{ $t('views.dataset.setting.vectorization') }}
             </el-button>
             <el-button @click="openGenerateDialog()" :disabled="multipleSelection.length === 0">
-              {{ $t('views.document.setting.generateQuestion') }}
+              {{ $t('views.document.generateQuestion.title') }}
             </el-button>
             <el-button @click="openBatchEditDocument" :disabled="multipleSelection.length === 0">
               {{ $t('common.setting') }}
@@ -86,11 +86,7 @@
             :label="$t('views.document.table.paragraph')"
             align="right"
           />
-          <el-table-column
-            prop="status"
-            :label="$t('views.document.fileStatus.label')"
-            width="130"
-          >
+          <el-table-column prop="status" :label="$t('views.document.fileStatus.label')" width="130">
             <template #header>
               <div>
                 <span>{{ $t('views.document.fileStatus.label') }}</span>
@@ -241,7 +237,7 @@
               </div>
             </template>
             <template #default="{ row }">
-              {{ hitHandlingMethod[row.hit_handling_method as keyof typeof hitHandlingMethod] }}
+              {{ $t(hitHandlingMethod[row.hit_handling_method as keyof typeof hitHandlingMethod]) }}
             </template>
           </el-table-column>
           <el-table-column prop="create_time" :label="$t('common.createTime')" width="175">
@@ -318,7 +314,7 @@
                         </el-dropdown-item>
                         <el-dropdown-item v-else @click="openGenerateDialog(row)">
                           <el-icon><Connection /></el-icon>
-                          {{ $t('views.document.setting.generateQuestion') }}
+                          {{ $t('views.document.generateQuestion.title') }}
                         </el-dropdown-item>
                         <el-dropdown-item @click="openDatasetDialog(row)">
                           <AppIcon iconName="app-migrate"></AppIcon>
@@ -407,7 +403,7 @@
                         </el-dropdown-item>
                         <el-dropdown-item v-else @click="openGenerateDialog(row)">
                           <el-icon><Connection /></el-icon>
-                          {{ $t('views.document.setting.generateQuestion') }}
+                          {{ $t('views.document.generateQuestion.title') }}
                         </el-dropdown-item>
                         <el-dropdown-item @click="openDatasetDialog(row)">
                           <AppIcon iconName="app-migrate"></AppIcon>
